@@ -17,14 +17,7 @@ h3{
 h5{
   font-size: 18px;
 }
-body{
-    min-width: 1200px;
-    overflow-x: auto;
-}
-.container{
-    width: 1200px;
-    margin: auto;
-}
+
 nav{
     position: sticky;
     top: 0;
