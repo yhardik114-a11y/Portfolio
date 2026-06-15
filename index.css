@@ -130,15 +130,14 @@ p{
 
 
 #shalu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  top: 57%;
-  bottom: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: rgb(5, 5, 5);
-  font-family: Arial, sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+
 }
 .color{
     background-color: red;
