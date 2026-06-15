@@ -1,2 +1,2 @@
-# CODSOFT
-A collection of beginner-friendly web projects including a Portfolio Website, Calculator, Question &amp; Answer Form, and Pepsi Landing Page, built with HTML, CSS, and JavaScript.
+#Portfolio
+Personal Portfolio Website built using HTML, CSS, and JavaScript to showcase my projects, skills, certificates, and contact information.
