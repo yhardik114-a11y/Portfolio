@@ -1,0 +1,434 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    color:white;
+    overflow-x:hidden;
+
+    background:linear-gradient(
+    -45deg,
+    #0047AB,
+    #001F54,
+    #0066ff,
+    #002147
+    );
+
+    background-size:400% 400%;
+    animation:bgMove 20s ease infinite;
+}
+
+/* Background Animation */
+@keyframes bgMove{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* Navbar */
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 80px;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+
+    animation:navbarReveal 2s ease;
+}
+
+@keyframes navbarReveal{
+    from{
+        opacity:0;
+        transform:translateY(-100px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    letter-spacing:2px;
+    transition:.5s;
+}
+
+.logo:hover{
+    transform:scale(1.1);
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    position:relative;
+}
+
+nav ul li a::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0;
+    height:2px;
+    background:white;
+    transition:.5s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+}
+
+/* Hero Section */
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:50px;
+    animation:heroZoom 2.5s ease;
+}
+
+@keyframes heroZoom{
+    from{
+        opacity:0;
+        transform:scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.content{
+    width:50%;
+    animation:heroText 2.5s ease forwards;
+}
+
+@keyframes heroText{
+    from{
+        opacity:0;
+        transform:translateY(80px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.content h1{
+    font-size:65px;
+    margin-bottom:20px;
+}
+
+.content p{
+    font-size:20px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+/* Pepsi Can */
+.image{
+    position:relative;
+}
+
+.image::before{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    filter:blur(80px);
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    animation:glowPulse 8s ease infinite;
+}
+
+@keyframes glowPulse{
+    0%,100%{
+        transform:translate(-50%,-50%) scale(1);
+    }
+    50%{
+        transform:translate(-50%,-50%) scale(1.2);
+    }
+}
+
+.image img{
+    width:320px;
+    position:relative;
+    z-index:2;
+    animation:premiumFloat 6s ease-in-out infinite;
+}
+
+@keyframes premiumFloat{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-30px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    color:#0047AB;
+    position:relative;
+    overflow:hidden;
+    transition:.5s;
+}
+
+button::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,.4);
+    transform:skewX(-25deg);
+    transition:1s;
+}
+
+button:hover::before{
+    left:120%;
+}
+
+button:hover{
+    transform:translateY(-5px);
+}
+
+/* Products Section */
+.products{
+    padding:100px 10%;
+    background:#ffffff;
+    color:#222;
+}
+
+.products h2{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:60px;
+}
+
+.product-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.product-card{
+    width:300px;
+    background:#f7f7f7;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+    transition:all .8s ease;
+}
+
+.product-card:hover{
+    transform:translateY(-15px) scale(1.03);
+}
+
+.product-card img{
+    width:100%;
+    height:250px;
+    object-fit:contain;
+}
+
+.product-card h3{
+    margin:15px 0;
+}
+
+.product-card span{
+    display:block;
+    margin:15px 0;
+    color:#0047AB;
+    font-size:25px;
+    font-weight:bold;
+}
+
+.product-card button{
+    background:#0047AB;
+    color:white;
+}
+
+/* About Brands */
+.about-brands{
+    background:#f3f3f3;
+    color:#222;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.about-brands h2{
+    font-size:45px;
+    margin-bottom:40px;
+}
+
+.brands-container{
+    position:relative;
+    height:400px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.center-product img{
+    width:280px;
+    animation:premiumFloat 6s ease infinite;
+}
+
+.arrow{
+    position:absolute;
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    border:none;
+    background:#0047AB;
+    color:white;
+    font-size:30px;
+}
+
+.left{
+    left:50px;
+}
+
+.right{
+    right:50px;
+}
+
+.explore-btn{
+    background:#0047AB;
+    color:white;
+    margin-top:30px;
+}
+
+
+.popup{
+    position:fixed;
+    bottom:-100px;
+    left:50%;
+    transform:translateX(-50%);
+    background:white;
+    color:#0047AB;
+    padding:15px 30px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.5s;
+}
+
+.popup.show{
+    bottom:30px;
+}
+
+/* Scroll Animation */
+.hidden{
+    opacity:0;
+    transform:translateY(120px);
+    transition:all 1.8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+@media(max-width:768px){
+
+    nav{
+        padding:20px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .content{
+        width:100%;
+    }
+
+    .content h1{
+        font-size:42px;
+    }
+
+    .content p{
+        font-size:18px;
+    }
+
+    .image img{
+        width:250px;
+    }
+
+    .left{
+        left:10px;
+    }
+
+    .right{
+        right:10px;
+    }
+}
+footer{
+    background: #0f2027;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    margin-top: 50px;
+}
+footer p{
+  font-size: 20px;
+}
