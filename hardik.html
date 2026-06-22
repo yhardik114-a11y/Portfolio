@@ -1,28 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Contact form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
     <link rel="stylesheet" href="hardik.css">
-
 </head>
 <body>
-    <form
-  action="https://formspree.io/f/mgoprzgd"
-  method="POST">
-	<h1>Get In Touch</h1>
-    <input type="text" name="Full name" placeholder="Full name" autocomplete="off" required>
-    <input type="email" name="email" placeholder="Email Address" autocomplete="off" required>
-    <input type="Num" name="Contact No" placeholder="Contact No" autocomplete="off" required>
-    <textarea rows="5" cols="70" name="Message" placeholder="Enter text" autocomplete="off"></textarea>
-    <button type="submit">Send Message</button>    
-   </form>
-   <br>
-   <br>
-   <div style="text-align: center;">
-   <a href="https://www.linkedin.com/in/hardik-yadav-a9a223371/" style="color: white;"> linkedin</a>
-   <a href="https://github.com/yhardik114-a11y" style="color: white;">github</a>
+
+    <div class="container">
+
+        <form action="https://formspree.io/f/mgoprzgd" method="POST">
+
+            <h1>Get In Touch</h1>
+
+            <input
+                type="text"
+                name="Full Name"
+                placeholder="Full Name"
+                autocomplete="off"
+                required
+            >
+
+            <input
+                type="email"
+                name="Email"
+                placeholder="Email Address"
+                autocomplete="off"
+                required
+            >
+
+            <input
+                type="tel"
+                name="Contact No"
+                placeholder="Contact Number"
+                autocomplete="off"
+                required
+            >
+
+            <textarea
+                rows="5"
+                name="Message"
+                placeholder="Enter Your Message"
+                autocomplete="off"
+                required
+            ></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+        <br>
+        <br>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/hardik-yadav-a9a223371/" target="_blank">
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/yhardik114-a11y" target="_blank">
+                GitHub
+            </a>
+        </div>
+
+    </div>
 
 </body>
 </html>
