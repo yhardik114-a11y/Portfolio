@@ -11,22 +11,15 @@ html{
 
 body{
     min-height:100vh;
+    display:flex;
+    flex-direction:column;
     color:white;
     overflow-x:hidden;
-
-    background:linear-gradient(
-    -45deg,
-    #0047AB,
-    #001F54,
-    #0066ff,
-    #002147
-    );
-
+    background:linear-gradient(-45deg,#0047AB,#001F54,#0066ff,#002147);
     background-size:400% 400%;
     animation:bgMove 20s ease infinite;
 }
 
-/* Background Animation */
 @keyframes bgMove{
     0%{
         background-position:0% 50%;
@@ -39,21 +32,23 @@ body{
     }
 }
 
-/* Navbar */
+header,
+.hero,
+.about-brands,
+.products{
+    width:100%;
+}
+
 nav{
     position:sticky;
     top:0;
     z-index:1000;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     padding:20px 80px;
-
     background:rgba(255,255,255,.08);
     backdrop-filter:blur(12px);
-
     animation:navbarReveal 2s ease;
 }
 
@@ -110,7 +105,6 @@ nav ul li a:hover::after{
     width:100%;
 }
 
-/* Hero Section */
 .hero{
     min-height:90vh;
     display:flex;
@@ -158,7 +152,6 @@ nav ul li a:hover::after{
     margin-bottom:30px;
 }
 
-/* Pepsi Can */
 .image{
     position:relative;
 }
@@ -205,7 +198,6 @@ nav ul li a:hover::after{
     }
 }
 
-
 button{
     padding:15px 35px;
     border:none;
@@ -239,64 +231,6 @@ button:hover{
     transform:translateY(-5px);
 }
 
-/* Products Section */
-.products{
-    padding:100px 10%;
-    background:#ffffff;
-    color:#222;
-}
-
-.products h2{
-    text-align:center;
-    font-size:45px;
-    margin-bottom:60px;
-}
-
-.product-container{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-}
-
-.product-card{
-    width:300px;
-    background:#f7f7f7;
-    border-radius:20px;
-    padding:20px;
-    text-align:center;
-    box-shadow:0 8px 25px rgba(0,0,0,.1);
-    transition:all .8s ease;
-}
-
-.product-card:hover{
-    transform:translateY(-15px) scale(1.03);
-}
-
-.product-card img{
-    width:100%;
-    height:250px;
-    object-fit:contain;
-}
-
-.product-card h3{
-    margin:15px 0;
-}
-
-.product-card span{
-    display:block;
-    margin:15px 0;
-    color:#0047AB;
-    font-size:25px;
-    font-weight:bold;
-}
-
-.product-card button{
-    background:#0047AB;
-    color:white;
-}
-
-/* About Brands */
 .about-brands{
     background:#f3f3f3;
     color:#222;
@@ -312,7 +246,6 @@ button:hover{
 .brands-container{
     position:relative;
     height:400px;
-
     display:flex;
     justify-content:center;
     align-items:center;
@@ -348,6 +281,61 @@ button:hover{
     margin-top:30px;
 }
 
+.products{
+    padding:100px 10%;
+    background:#ffffff;
+    color:#222;
+}
+
+.products h2{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:60px;
+}
+
+.product-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.product-card{
+    width:300px;
+    background:#f7f7f7;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.1);
+    transition:.8s;
+}
+
+.product-card:hover{
+    transform:translateY(-15px) scale(1.03);
+}
+
+.product-card img{
+    width:100%;
+    height:250px;
+    object-fit:contain;
+}
+
+.product-card h3{
+    margin:15px 0;
+}
+
+.product-card span{
+    display:block;
+    margin:15px 0;
+    color:#0047AB;
+    font-size:25px;
+    font-weight:bold;
+}
+
+.product-card button{
+    background:#0047AB;
+    color:white;
+}
 
 .popup{
     position:fixed;
@@ -366,7 +354,6 @@ button:hover{
     bottom:30px;
 }
 
-/* Scroll Animation */
 .hidden{
     opacity:0;
     transform:translateY(120px);
@@ -378,6 +365,18 @@ button:hover{
     transform:translateY(0);
 }
 
+footer{
+    width:100%;
+    background:#0f2027;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:auto;
+}
+
+footer p{
+    font-size:18px;
+}
 
 @media(max-width:768px){
 
@@ -392,9 +391,14 @@ button:hover{
         justify-content:center;
     }
 
+    nav ul li{
+        margin:10px;
+    }
+
     .hero{
         flex-direction:column;
         text-align:center;
+        padding:30px 20px;
     }
 
     .content{
@@ -413,6 +417,15 @@ button:hover{
         width:250px;
     }
 
+    .about-brands h2,
+    .products h2{
+        font-size:35px;
+    }
+
+    .center-product img{
+        width:220px;
+    }
+
     .left{
         left:10px;
     }
@@ -420,15 +433,19 @@ button:hover{
     .right{
         right:10px;
     }
-}
-footer{
-    background: #0f2027;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 18px;
-    margin-top: 50px;
-}
-footer p{
-  font-size: 20px;
+
+    .arrow{
+        width:50px;
+        height:50px;
+        font-size:22px;
+    }
+
+    .product-card{
+        width:100%;
+        max-width:320px;
+    }
+
+    footer p{
+        font-size:16px;
+    }
 }
