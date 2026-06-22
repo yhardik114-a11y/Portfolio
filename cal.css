@@ -1,74 +1,106 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #d2e6ff;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:#d2e6ff;
+}
+
+.container{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    padding:20px;
 }
 
 .calculator{
-    border: 1px solid #6b6f76;
-    padding: 20px;
-    border-radius: 16px;
-    background: linear-gradient(45deg, #0a0a0a, #3a4452);
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),5px 5px 15px rgba(0, 0, 0, 0.2);
-
+    border:1px solid #6b6f76;
+    padding:20px;
+    border-radius:16px;
+    background:linear-gradient(45deg,#0a0a0a,#3a4452);
+    box-shadow:-8px -8px 15px rgba(255,255,255,.1),
+               5px 5px 15px rgba(0,0,0,.2);
 }
 
 input{
-    width: 320px;
-    border: 0;
-    padding: 24px;
-    margin: 10px;
-    background: lightgray;
-    border-radius: 10px;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1) ;
-    font-size: 40px;
-    text-align: right;
-    cursor: pointer;
-    color: #040404;
+    width:320px;
+    border:0;
+    padding:24px;
+    margin:10px;
+    background:lightgray;
+    border-radius:10px;
+    box-shadow:-8px -8px 15px rgba(255,255,255,.1);
+    font-size:40px;
+    text-align:right;
+    color:#040404;
 }
 
-
-
 button{
-    border: none;
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    border-radius: 20px;
-    background: transparent;
-    color: #ffffff;
-    font-size: 20px;
-    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
-    cursor: pointer;
+    border:none;
+    width:60px;
+    height:60px;
+    margin:10px;
+    border-radius:20px;
+    background:transparent;
+    color:white;
+    font-size:20px;
+    box-shadow:-8px -8px 15px rgba(255,255,255,.1);
+    cursor:pointer;
 }
 
 .equalBtn{
-    background-color: #fb7c14;
-    width: 140px;
-    height: 60px;
+    background:#fb7c14;
+    width:140px;
+    height:60px;
 }
 
 .operator{
-    color: #6dee0a;
+    color:#6dee0a;
 }
+
 footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #0f2027;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 12px;
+    width:100%;
+    background:#0f2027;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:auto;
+}
+
+footer p{
+    font-size:16px;
+}
+
+@media (max-width:768px){
+
+    input{
+        width:260px;
+        font-size:30px;
+        padding:18px;
+    }
+
+    button{
+        width:50px;
+        height:50px;
+        margin:8px;
+        font-size:18px;
+    }
+
+    .equalBtn{
+        width:116px;
+    }
+
+    footer p{
+        font-size:14px;
+    }
 }
