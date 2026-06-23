@@ -80,20 +80,21 @@ nav a:hover{
 .curve,
 .contact,
 .view-btn{
-    padding:12px 25px;
-    border:none;
-    border-radius:25px;
-    background:#007bff;
-    color:white;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .curve:hover,
 .contact:hover,
 .view-btn:hover{
-    background:#0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,123,255,0.5);
 }
 
 section{
