@@ -215,6 +215,9 @@ footer p{
     }
 }
 
+/* ===================== NEW ADDITIONS ===================== */
+
+/* More Projects button (the link placed directly inside #project) */
 #project > a .view-btn{
     display:inline-block;
     margin-top:30px;
@@ -228,4 +231,21 @@ footer p{
     background:#007bff;
     color:white;
     box-shadow:0 10px 25px rgba(0,123,255,0.6);
+}
+
+/* Contact section spacing */
+#contact .contact{
+    margin:10px;
+}
+
+/* GitHub button */
+.github-btn{
+    background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);
+    box-shadow:0 4px 15px rgba(15,32,39,0.4);
+}
+
+.github-btn:hover{
+    background:linear-gradient(90deg,#0f2027,#203a43,#2c5364);
+    color:#00e5ff;
+    box-shadow:0 10px 25px rgba(0,229,255,0.4);
 }
